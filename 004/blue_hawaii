@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require_relative './lib/blue_hawaii'
+
+if ARGV.size < 2
+  fail "Please supply correct arguments\n" +
+    "USAGE: ./blue_hawaii <date-input> <hotel-json-input> <output>\n" +
+    "EXAMPLE: ./blue_hawaii support/input.txt support/vacation_rentals.json output.txt"
+elsif ARGV.size < 3
+  output_file = 'support/output.txt'
+else
+  output_file = ARGV[2]
+end
+
+output = BlueHawaii.hotel_rates(ARGV[0], ARGV[1])
+File.open(output_file, 'w') { |file| file.write(output) }
+

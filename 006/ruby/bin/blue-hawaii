@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << "#{File.dirname(__FILE__)}/../lib"
+
+require 'blue_hawaii'
+
+if ARGV.length != 2
+  puts "Usage: blue-hawaii PATH_TO_INPUT_TXT PATH_TO_RENTAL_JSON"
+else
+  p BlueHawaii.new(*ARGV)
+end
+

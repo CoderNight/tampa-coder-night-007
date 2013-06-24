@@ -1,0 +1,3 @@
+Okay... this is not working. At all. I decided to try to use Go after hearing it was fairly powerful.
+
+Maybe someone can see where I went wrong...
